@@ -1,0 +1,122 @@
+name: teste_git_hub
+description: "ERP KDL"
+
+publish_to: 'none' 
+version: 0.6.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  http: 0.13.3
+  archive: ^3.4.9
+  intl: ^0.19.0
+  get: ^4.6.6
+  go_router:
+  excel: ^4.0.3
+  file_picker: ^5.2.2
+  path_provider: ^2.1.3
+  flutter_svg:
+  provider: ^6.1.2
+  camera: ^0.10.5+9
+  auto_size_text: ^3.0.0
+  equatable: ^2.0.5
+  csv: ^5.1.1 
+  flutter_barcode_listener:
+  visibility_detector: ^0.4.0+2
+  image:
+  pdf: ^3.10.8
+  printing: ^5.12.0
+  url_launcher: ^6.1.8
+  open_file: ^3.2.1
+  badges: ^3.1.2
+  build_runner: ^2.4.11
+  build_web_compilers:
+  shared_preferences: ^2.3.2
+  flutter_dotenv: ^5.2.1
+  web_socket_channel: ^3.0.1
+  fl_chart: ^0.66.0
+  
+  menu_modular:
+    path: ../menu_modular
+  responsive_table:
+    path: ../table_clean
+  ide_modular:
+    path: ../ide_modular
+
+  flutter_barcode_scanner: ^2.0.0
+  
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  fluent_ui: ^4.9.1
+  package_info_plus: ^3.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/logo.jpg
+    - assets/images/logo_kdl.jpg
+    - assets/fonts/roboto/Roboto-Regular.ttf
+    - assets/fonts/roboto/Roboto-Bold.ttf
+    - assets/fonts/roboto/Roboto-Italic.ttf
+    - assets/fonts/roboto/Roboto-BoldItalic.ttf
+
+    - assets/fonts/matemasie/Matemasie-Regular.ttf
+    - assets/local.env
+    - assets/remote.env
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/roboto/Roboto-Italic.ttf
+          style: italic
+        - asset: assets/fonts/roboto/Roboto-BoldItalic.ttf
+          weight: 700
+          style: italic
+
+    - family: Matemaisie
+      fonts:
+        - asset: assets/fonts/matemasie/Matemasie-Regular.ttf
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  #
+  
+  

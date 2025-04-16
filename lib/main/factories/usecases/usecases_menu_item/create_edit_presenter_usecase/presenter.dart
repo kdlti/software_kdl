@@ -1,0 +1,1 @@
+export 'record_edit_simuc_factory.dart';

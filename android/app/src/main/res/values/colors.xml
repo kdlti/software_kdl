@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cor personalizada para a Splash Screen -->
+    <color name="splash_background">#2196F3</color> <!-- Azul -->
+
+    <!-- Cores básicas -->
+    <color name="colorPrimary">#6200EE</color> <!-- Cor principal do app -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Cor de fundo da barra de status -->
+    <color name="colorAccent">#03DAC5</color> <!-- Cor de destaque para botões ou seleções -->
+
+    <!-- Outras cores -->
+    <color name="background">#FFFFFF</color> <!-- Cor de fundo padrão -->
+    <color name="textColor">#000000</color> <!-- Cor de texto -->
+</resources>

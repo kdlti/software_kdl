@@ -1,0 +1,1 @@
+export '../molecules/template.dart';

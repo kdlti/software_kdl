@@ -1,0 +1,70 @@
+#Instala o node e o linux alpine
+FROM node:12-alpine
+#Diretório onde será criada a pasta
+WORKDIR /app
+
+COPY package.json .
+#Instala a dependência do pyhon, Run executa quando está construindo a imagem 
+RUN apk add --no-cache python2 g++ make
+RUN yarn install --production
+
+#Copia os arquivos
+COPY . .
+
+#O cmd ele executa depois que a imagem está construída, e está executando a aplicação
+CMD ["node", "src/index.js"]
+
+# ENV API_URL=https://api.andreiacono.com/
+
+#Porta de entrada para a aplicação, a porta é aberta no container, não no servidor se a do servidor estiver fechada não adianta
+#pode ter u fireqall bloqueando o numero 3000
+
+EXPOSE 3000
+
+
+# Comandos docker
+#       Images
+# Printar todas as images ==> docker images
+# Buildar imagem com tags/versionamento ==> docker build -t app:v1.0.0 .
+# Renomear tags/versionamento ==> docker image tag app:latest app:v1.0.0
+# Comando para renomear nome pelo ID ==> docker image tag eaa7bfbbdaf7 gamingtechedu/app:v1
+# Buildar imagem ==> docker build -t app .
+# Rodar mapeando a porta ==> docker run -dp 3000:3000 app
+# Remover images ==> docker image remove app:v1.0.0 
+# Remover images ==> docker image rm app:v2
+# Fazer login ==> docker login
+# Fazendo upload para o dockerHub ==> docker push gamingtechedu/app:v1
+# Salvar image na máquina ==> docker image save -o appv2.tar app:v2 ==> docker image save -o nomeararquivo arquivodeorigemdocker
+# Carregar imagem em algum servidor ==> docker image load -i appv2.tar   
+#   
+#
+#       Container
+# Listar container ==> docker ps
+# Iniciar container ==> docker run app:v2
+# Iniciar container em background e libera o cmd ==> docker run -d gamingtechedu/app:v2
+# Iniciar container em background e nomeia um container ==> docker run -d --name manga gamingtechedu/app:v2
+# Logs do container ==> docker logs -f ID  | docker logs ID 
+# Logs do container mostra as 10 últimas linhas ==> docker logs -n 10 ID 
+# Logs do container timestamp ==> docker logs -t ID 
+# Mapeamento de portas de container ==> docker run -d -p 80:3000 --name banana app:v2 | host:docker
+# Visualizar infos dentro de um container sem acessar ele ==> docker exec CONTAINER ls
+# Parar container ==> docker stop CONTAINER
+# Rodar container ==> docker start CONTAINER
+# Remover container ==> docker rm manga
+# Remover container forçado ==> docker rm -f manga
+# Visualizar containers que estão parados ==> docker ps -a 
+# docker run -p [porta_externa]:[porta_interna] [imagem]
+#
+#      Volumes
+# Criar volume ==> docker volume create NOME
+# Verificar infos volume ==> docker volume inspect app-dados
+# Associar volume ao a um container ==> docker run -d -p 3000:3000 --name kiwi -v app-dados:/app/dados gamingtechedu/app:v2
+# Verificando se realmente o volume está no container ==> docker exec -it CONTAINER sh
+#
+#      Docker Compose
+# Comando para criar o docker compose ==> docker compose up --build
+# Listar composes ==> docker-compose ps
+# Terminar serviços ==> docker-compose down
+#
+#
+#

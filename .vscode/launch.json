@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "teste_software_github",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main/main.dart",
+            "args": ["--dart-define=ENV_FILE=local.env"]
+        },
+        {
+            "name": "Profile Mode",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "program": "lib/main/main.dart"
+        },
+        {
+            "name": "teste_software_github (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "program": "lib/main/main.dart"
+        }
+    ]
+}
